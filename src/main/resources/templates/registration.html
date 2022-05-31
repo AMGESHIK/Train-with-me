@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<!--<head>-->
+<!--  <title>Spring Security Example </title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div th:text="${message}"></div>-->
+<!--<form th:action="@{/registration}" method="post">-->
+<!--  <div><label> User Name: <input type="text" name="username"/> </label></div>-->
+<!--  <div><label> Password: <input type="password" name="password"/> </label></div>-->
+<!--  <div><input type="submit" value="Sign In"/></div>-->
+<!--</form>-->
+<!--</body>-->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Registration</title>
+
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/bootstrap/css/bootstrap.min.css" th:href="@{/bootstrap/css/bootstrap.min.css}"
+          rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css2/signin.css" th:href="@{/css2/signin.css}" rel="stylesheet">
+    <style>[_nghost-hco-c63] {
+        font-family: Open Sans, sans-serif;
+        color: #121212
+    }</style>
+</head>
+
+<body class="text-center vsc-initialized">
+
+<main class="form-signin">
+    <form th:action="@{/registration}" action="/registration" method="post">
+        <a href="/">
+            <img class="mb-4" src="../static/img/Train%20with%20me%202.png" th:src="@{/img/Train with me 2.png}" alt=""
+                 width="200">
+        </a>
+        <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
+
+        <div class="form-floating">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Username" name="username">
+            <label for="floatingInput">Имя пользователя</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="email" class="form-control" placeholder="Email" name="email">
+            <label>Электронная почта</label>
+        </div>
+
+        <div class="form-floating">
+            <input type="password" class="form-control" id="floatingPassword" placeholder="Password" name="password">
+            <label for="floatingPassword">Пароль</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="password" class="form-control" placeholder="passwordConfirm" name="passwordConfirm">
+            <label>Подтверждение пароля</label>
+        </div>
+
+        <div th:text="${message}" class="text-danger"></div>
+        <input class="w-100 btn btn-lg btn-primary" type="submit" value="Зарегистрировать">
+    </form>
+</main>
+
+</body>
+
+</html>
